@@ -6,7 +6,7 @@
   <body class="bg-dark">
     <div class="container" id="app">
       <div class="text-center" style="margin-bottom:50px;">
-        <a href="twitter.com/paramobot">
+        <a href="//www.twitter.com/paramobot">
         <img class="img-fluid" src="paramo2.png" />
         </a>
       </div>
@@ -23,8 +23,8 @@
                   <h6 class="card-subtitle mb-2 text-muted">¡Elige qué armas estarán disponibles en la batalla!</h6>
                   <div id="carousel1" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,i)">
-                        <li data-target="#carousel1Indicators" :data-slide-to="i"></li>
+                      <template v-for="weapon in (weapons,index)">
+                        <li data-target="#carousel1Indicators" :data-slide-to="index"></li>
                       </template>
                     </ol>
                     <div class="carousel-inner">
@@ -57,8 +57,8 @@
                   <h6 class="card-subtitle mb-2 text-muted">Los participantes podrán sufrir enfermedades, palizas y todo tipo de daños...</h6>
                   <div id="carousel2" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,i)">
-                        <li data-target="#carousel2Indicators" :data-slide-to="i"></li>
+                      <template v-for="weapon in (weapons,index)">
+                        <li data-target="#carousel2Indicators" :data-slide-to="index"></li>
                       </template>
                     </ol>
                     <div class="carousel-inner">
@@ -91,8 +91,8 @@
                   <h6 class="card-subtitle mb-2 text-muted">¿Qué powerups quieres ver en la batalla para potenciar las estadísticas?</h6>
                   <div id="carousel3" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,i)">
-                        <li data-target="#carousel3Indicators" :data-slide-to="i"></li>
+                      <template v-for="weapon in (weapons,index)">
+                        <li data-target="#carousel3Indicators" :data-slide-to="index"></li>
                       </template>
                     </ol>
                     <div class="carousel-inner">
