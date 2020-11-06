@@ -22,11 +22,6 @@
                   <h5 class="card-title">Armas</h5>
                   <h6 class="card-subtitle mb-2 text-muted">¡Elige qué armas estarán disponibles en la batalla!</h6>
                   <div id="carousel1" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,index)">
-                        <li data-target="#carousel1Indicators" :data-slide-to="index"></li>
-                      </template>
-                    </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item" v-for="weapon in weapons" class="d-block w-100" style="height: 200px;">
                         <h1 style="padding-top:25px;">{{weapon}}</h1>
@@ -56,11 +51,6 @@
                   <h5 class="card-title">Peligros</h5>
                   <h6 class="card-subtitle mb-2 text-muted">Los participantes podrán sufrir enfermedades, palizas y todo tipo de daños...</h6>
                   <div id="carousel2" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,index)">
-                        <li data-target="#carousel2Indicators" :data-slide-to="index"></li>
-                      </template>
-                    </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item" v-for="weapon in weapons" class="d-block w-100" style="height: 200px;">
                         <h1 style="padding-top:25px;">{{weapon}}</h1>
@@ -90,11 +80,6 @@
                   <h5 class="card-title">Potenciadores</h5>
                   <h6 class="card-subtitle mb-2 text-muted">¿Qué powerups quieres ver en la batalla para potenciar las estadísticas?</h6>
                   <div id="carousel3" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <template v-for="weapon in (weapons,index)">
-                        <li data-target="#carousel3Indicators" :data-slide-to="index"></li>
-                      </template>
-                    </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item" v-for="weapon in weapons" class="d-block w-100" style="height: 200px;">
                         <h1 style="padding-top:25px;">{{weapon}}</h1>
