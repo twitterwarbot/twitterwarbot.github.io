@@ -1,11 +1,10 @@
 <template>
   <div class="container">
-  <div class="text-center" style="margin-bottom: 50px;">
-        <a href="//www.twitter.com/paramobot"><img class="img-fluid" src="../assets/paramobot.png" alt="paramo" /></a>
+  <div class="text-center" style="margin: 25px 0;">
+      <a href="//www.twitter.com/paramobot"><img class="img-fluid" src="../assets/paramobot.png" alt="paramo" /></a>
       </div>
-      <div class="row">
-        <div class="col col-lg-2"></div>
-        <div class="col col-lg-8">
+      <div class="row text-center justify-content-center">
+        <div class="col-12 col-lg-8">
           <form form action="https://liveformhq.com/form/8e998583-1539-4ead-8b4a-0c8ae72a1e4c" method="POST" accept-charset="utf-8">
           <input type="hidden" value="https://liveformhq.com/thank_you" name="_redirect" />
             <div class="form-group">
@@ -13,24 +12,27 @@
                 <div class="card-body">
                   <h3 class="card-title">Armas</h3>
                   <h6 class="card-subtitle mb-2 text-muted">Los participantes dispondrán de armas y de defensas para ser más fuertes</h6>
-                  <div id="carousel1" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
+                  <div id="carousel1" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active" style="height: 200px;">
+                      <div class="carousel-item active">
                         <div class="d-block w-100">
-                          <h2 style="padding-top: 25px;">aaaaaaaaaa</h2>
+                          <h4 class="d-block d-md-none" style="padding: 25px 40px;">las páginas amarillas</h4>
+                          <h2 class="d-none d-md-block" style="padding: 25px 70px;">las páginas amarillas</h2>
                         </div>
                       </div>
                       <template v-for="weapon in shuffledWeapons">
-                        <div v-bind:key="weapon" class="carousel-item" style="height: 200px;">
+                        <div v-bind:key="weapon" class="carousel-item">
                           <div class="d-block w-100">
-                            <h2 style="padding-top: 25px;">{{weapon}}</h2>
+                            <h4 class="d-block d-md-none" style="padding: 25px 40px;">{{weapon}}</h4>
+                            <h2 class="d-none d-md-block" style="padding: 25px 70px;">{{weapon}}</h2>
                           </div>
                         </div>
                       </template>
                     </div>
-                    <div class="carousel-caption d-none d-md-block" style="position:absolute;bottom:0;">
-                      <h6>Es sólo una de las armas (<a href="/weapons.json">lista completa</a>)</h6>
-                      <p style="color: #dd3eda; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
+                    <div class="carousel-space d-block d-md-none"></div>
+                    <div class="carousel-caption">
+                      <h6>Es sólo una de las armas (<a style="font-weight: normal;" href="/weapons.json">lista completa</a>)</h6>
+                      <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,7 +43,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                  <input type="text" name="armas" placeholder="Inserte aquí las armas..." class="form-control" id="armas" style="margin-top: 20px;">
+                  <input type="text" name="armas" placeholder="Inserte aquí las armas..." class="form-control" id="armas">
                 </div>
               </div>
             </div>
@@ -50,24 +52,27 @@
                 <div class="card-body">
                   <h3 class="card-title">Peligros</h3>
                   <h6 class="card-subtitle mb-2 text-muted">Los participantes podrán sufrir enfermedades, palizas y todo tipo de daños...</h6>
-                  <div id="carousel2" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
+                  <div id="carousel2" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active" style="height: 200px;">
+                      <div class="carousel-item active">
                         <div class="d-block w-100">
-                          <h2 style="padding-top: 25px;">aaaaaaaaaa</h2>
+                          <h4 class="d-block d-md-none" style="padding: 25px 40px;">una hostia a mano abierta</h4>
+                          <h2 class="d-none d-md-block" style="padding: 25px 70px;">una hostia a mano abierta</h2>
                         </div>
                       </div>
                       <template v-for="injure in shuffledInjures">
-                        <div v-bind:key="injure" class="carousel-item" style="height: 200px;">
+                        <div v-bind:key="injure" class="carousel-item">
                           <div class="d-block w-100">
-                            <h2 style="padding-top: 25px;">{{injure}}</h2>
+                            <h4 class="d-block d-md-none" style="padding: 25px 40px;">{{injure}}</h4>
+                            <h2 class="d-none d-md-block" style="padding: 25px 70px;">{{injure}}</h2>
                           </div>
                         </div>
                       </template>
                     </div>
-                    <div class="carousel-caption d-none d-md-block" style="position:absolute;bottom:0;">
-                      <h6>Es sólo uno de los peligros (<a href="/injures.json">lista completa</a>)</h6>
-                      <p style="color: #dd3eda; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
+                    <div class="carousel-space d-block d-md-none"></div>
+                    <div class="carousel-caption">
+                      <h6>Es sólo uno de los peligros (<a style="font-weight: normal;" href="/injures.json">lista completa</a>)</h6>
+                      <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -78,7 +83,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                  <input type="text" name="injury" placeholder="Inserte aquí los peligros..." class="form-control" id="injury" style="margin-top: 20px;" />
+                  <input type="text" name="injury" placeholder="Inserte aquí los peligros..." class="form-control" id="injury" />
                 </div>
               </div>
             </div>
@@ -87,24 +92,27 @@
                 <div class="card-body">
                   <h3 class="card-title">Potenciadores</h3>
                   <h6 class="card-subtitle mb-2 text-muted">¿Qué powerups quieres ver en la batalla para potenciar las estadísticas?</h6>
-                  <div id="carousel3" class="carousel slide bg-dark text-white text-center" data-ride="carousel">
+                  <div id="carousel3" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active" style="height: 200px;">
+                      <div class="carousel-item active">
                         <div class="d-block w-100">
-                          <h2 style="padding-top: 25px;">aaaaaaaaaa</h2>
+                        <h4 class="d-block d-md-none" style="padding: 25px 40px;">un Beefeater limón</h4>
+                        <h2 class="d-none d-md-block" style="padding: 25px 70px;">un Beefeater limón</h2>
                         </div>
                       </div>
                       <template v-for="powerup in shuffledPowerups">
-                        <div v-bind:key="powerup" class="carousel-item" style="height: 200px;">
+                        <div v-bind:key="powerup" class="carousel-item">
                           <div class="d-block w-100">
-                            <h2 style="padding-top: 25px;">{{powerup}}</h2>
+                          <h4 class="d-block d-md-none" style="padding: 25px 40px;">{{powerup}}</h4>
+                          <h2 class="d-none d-md-block" style="padding: 25px 70px;">{{powerup}}</h2>
                           </div>
                         </div>
                       </template>
                     </div>
-                    <div class="carousel-caption d-none d-md-block" style="position:absolute;bottom:0;">
-                      <h6>Es sólo uno de los powerups (<a href="/powerups.json">lista completa</a>)</h6>
-                      <p style="color: #dd3eda; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
+                    <div class="carousel-space d-block d-md-none"></div>
+                    <div class="carousel-caption">
+                      <h6>Es sólo uno de los powerups (<a style="font-weight: normal;" href="/powerups.json">lista completa</a>)</h6>
+                      <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -115,7 +123,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-                  <input type="text" name="powerup" placeholder="Inserte aquí los potenciadores..." class="form-control" id="powerup" style="margin-top: 20px;" />
+                  <input type="text" name="powerup" placeholder="Inserte aquí los potenciadores..." class="form-control" id="powerup" />
                 </div>
               </div>
             </div>
@@ -186,4 +194,32 @@ export default {
 </script>
 
 <style scoped>
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  margin-top: 38px;
+}
+.carousel-control-next, .carousel-control-prev {
+  align-items: self-start;
+}
+.carousel-caption {
+  position:absolute;
+  bottom:0;
+  padding-bottom: 0;
+}
+.carousel-item {
+height: 170px;
+}
+.carousel-space {
+height: 50px;
+}
+.form-control {
+  margin-top: 20px;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+.carousel.slide{
+ background-color: #dd3eda;
+ text-align: center;
+ color: white;
+}
 </style>
