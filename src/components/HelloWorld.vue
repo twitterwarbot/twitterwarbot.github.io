@@ -7,6 +7,15 @@
         <div class="col-12 col-lg-8">
           <form form action="https://liveformhq.com/form/8e998583-1539-4ead-8b4a-0c8ae72a1e4c" method="POST" accept-charset="utf-8">
           <input type="hidden" value="https://liveformhq.com/thank_you" name="_redirect" />
+          <div class="form-group">
+            <div class="card">
+              <div class="card-body text-center">
+              <h3 class="card-title">Tu nombre de Twitter</h3>
+              <h6 class="card-subtitle mb-2 text-muted">No es obligatorio, pero entrarás a participar en el sorteo</h6>
+                <input type="text" name="username" placeholder="Inserte username..." class="form-control" id="username" />
+              </div>
+            </div>
+          </div>
             <div class="form-group">
               <div class="card">
                 <div class="card-body">
@@ -143,9 +152,6 @@
                   <button type="submit" class="btn btn-primary" style="float: right; width: 150px;">Enviar</button>
                 </div>
               </div>
-            </div>
-            <div style="position: absolute; left: -5000px;">
-              <input type="checkbox" name="amazing_yellow_striped_barracuda" value="1" tabindex="-1" autocomplete="no" />
             </div>
           </form>
         </div>
