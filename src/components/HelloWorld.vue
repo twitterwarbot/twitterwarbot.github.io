@@ -31,7 +31,7 @@
                     </div>
                     <div class="carousel-space d-block d-md-none"></div>
                     <div class="carousel-caption">
-                      <h6>Es sólo una de las armas (<a style="font-weight: normal;" href="/weapons.json">lista completa</a>)</h6>
+                      <h6>Es sólo una de las armas (<a style="font-weight: normal;" href="/json/weapons.json">lista completa</a>)</h6>
                       <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
@@ -71,7 +71,7 @@
                     </div>
                     <div class="carousel-space d-block d-md-none"></div>
                     <div class="carousel-caption">
-                      <h6>Es sólo uno de los peligros (<a style="font-weight: normal;" href="/injures.json">lista completa</a>)</h6>
+                      <h6>Es sólo uno de los peligros (<a style="font-weight: normal;" href="/json/injures.json">lista completa</a>)</h6>
                       <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
@@ -111,7 +111,7 @@
                     </div>
                     <div class="carousel-space d-block d-md-none"></div>
                     <div class="carousel-caption">
-                      <h6>Es sólo uno de los powerups (<a style="font-weight: normal;" href="/powerups.json">lista completa</a>)</h6>
+                      <h6>Es sólo uno de los powerups (<a style="font-weight: normal;" href="/json/powerups.json">lista completa</a>)</h6>
                       <p style="color: black; font-weight: 800;">¡Escribe tus propuestas debajo!</p>
                     </div>
                     <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
@@ -221,5 +221,8 @@ height: 50px;
  background-color: #dd3eda;
  text-align: center;
  color: white;
+}
+a {
+color: #b4bdff;
 }
 </style>
