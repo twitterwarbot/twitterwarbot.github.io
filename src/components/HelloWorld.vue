@@ -130,6 +130,15 @@
             <div class="form-group">
               <div class="card">
                 <div class="card-body text-center">
+                <h3 class="card-title">¿Algo más?</h3>
+                <h6 class="card-subtitle mb-2 text-muted">Algo más que se te ocurra, yokse</h6>
+                  <input type="text" name="suggestion" placeholder="Inserte aquí las sugerencias..." class="form-control" id="suggestion" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="card">
+                <div class="card-body text-center">
                   <a style="color: #dd3eda; font-weight: 800;">Acuérdate de pulsar aquí! --------------------> </a>
                   <button type="submit" class="btn btn-primary" style="float: right; width: 150px;">Enviar</button>
                 </div>
