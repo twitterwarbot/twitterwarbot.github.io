@@ -403,6 +403,9 @@ export default {
       });
     });
   },
+  beforeCreate: function () {
+    document.body.className = "bg-dark";
+  },
   computed: {
     shuffledWeapons: function () {
       return this.shuffle(this.weapons);
