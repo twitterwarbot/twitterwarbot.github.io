@@ -420,6 +420,14 @@ export default {
       return this.shuffle(this.participants);
     },
   },
+  watch: {
+        $route: {
+            immediate: true,
+            handler() {
+                document.title = 'Páramo Bot';
+            }
+        },
+    },
   methods: {
     shuffle(sourceArray) {
       for (var i = 0; i < sourceArray.length - 1; i++) {
