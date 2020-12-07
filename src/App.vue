@@ -1,19 +1,21 @@
 <template>
   <div class="container" id="app">
-    <HelloWorld />
+    <!-- <SuggestionsForm /> -->
+    <ThankYou />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import SuggestionsForm from "./components/SuggestionsForm.vue";
+import ThankYou from "./components/ThankYou.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    // SuggestionsForm,
+    ThankYou,
+  },
+};
 </script>
 
-<style>
-</style>
+<style></style>

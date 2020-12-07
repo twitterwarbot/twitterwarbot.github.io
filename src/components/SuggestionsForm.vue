@@ -378,7 +378,7 @@ import participants from "../assets/participants.json";
 import $ from "jquery";
 
 export default {
-  name: "hello-world",
+  name: "suggestions-form",
   data() {
     return {
       weapons: weapons,
@@ -421,13 +421,13 @@ export default {
     },
   },
   watch: {
-        $route: {
-            immediate: true,
-            handler() {
-                document.title = 'Páramo Bot';
-            }
-        },
+    $route: {
+      immediate: true,
+      handler() {
+        document.title = "Páramo Bot";
+      },
     },
+  },
   methods: {
     shuffle(sourceArray) {
       for (var i = 0; i < sourceArray.length - 1; i++) {
