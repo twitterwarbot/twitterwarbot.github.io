@@ -1,19 +1,19 @@
 <template>
   <div class="container" id="app">
-    <!-- <SuggestionsForm /> -->
-    <ThankYou />
+    <SuggestionsForm />
+    <!-- <ThankYou /> -->
   </div>
 </template>
 
 <script>
-// import SuggestionsForm from "./components/SuggestionsForm.vue";
-import ThankYou from "./components/ThankYou.vue";
+import SuggestionsForm from "./components/SuggestionsForm.vue";
+//import ThankYou from "./components/ThankYou.vue";
 
 export default {
   name: "App",
   components: {
-    // SuggestionsForm,
-    ThankYou,
+    SuggestionsForm,
+    //ThankYou,
   },
 };
 </script>
