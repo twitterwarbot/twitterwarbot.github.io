@@ -110,7 +110,7 @@
                       Es sólo una de las armas (<a
                         style="font-weight: normal"
                         target="_blank"
-                        href="/json/weapons.json"
+                        href="/weapons?bot=twitch"
                         >lista completa</a
                       >)
                     </h6>
@@ -204,7 +204,7 @@
                       Es sólo uno de los peligros (<a
                         style="font-weight: normal"
                         target="_blank"
-                        href="/json/injures.json"
+                        href="/injures?bot=twitch"
                         >lista completa</a
                       >)
                     </h6>
@@ -298,7 +298,7 @@
                       Es sólo uno de los potenciadores (<a
                         style="font-weight: normal"
                         target="_blank"
-                        href="/json/powerups.json"
+                        href="/powerups?bot=twitch"
                         >lista completa</a
                       >)
                     </h6>
@@ -397,16 +397,8 @@ export default {
       participants: participants,
     };
   },
-  mounted: function () {
-    var link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    }
-    link.href = "./assets/twitch/favicon.ico";
-
-    this.$nextTick(function () {
+  mounted: function() {
+    this.$nextTick(function() {
       $("#carousel0").carousel({
         interval: 2000,
       });
@@ -421,20 +413,17 @@ export default {
       });
     });
   },
-  beforeCreate: function () {
-    document.body.className = "bg-dark";
-  },
   computed: {
-    shuffledWeapons: function () {
+    shuffledWeapons: function() {
       return this.shuffle(this.weapons);
     },
-    shuffledInjures: function () {
+    shuffledInjures: function() {
       return this.shuffle(this.injures);
     },
-    shuffledPowerups: function () {
+    shuffledPowerups: function() {
       return this.shuffle(this.powerups);
     },
-    shuffledParticipants: function () {
+    shuffledParticipants: function() {
       return this.shuffle(this.participants).splice(0, 18);
     },
   },

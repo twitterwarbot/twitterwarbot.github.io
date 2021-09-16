@@ -28,7 +28,9 @@
             <div class="d-flex flex-column align-items-center">
               <img
                 class="img-fluid img-narrow"
-                :src="require(`../assets/twitch/avatars/${participant}.png`)"
+                :src="
+                  require(`../assets/${botType}/avatars/${participant}.png`)
+                "
                 alt="paramo"
               />
               <div>{{ participant }}</div>
@@ -43,9 +45,6 @@
 <script>
 export default {
   name: "participants",
-  beforeCreate: function () {
-    document.body.className = "bg-dark";
-  },
   computed: {
     botType() {
       const type = new URLSearchParams(window.location.search).get("bot");
@@ -56,15 +55,6 @@ export default {
         return null;
       }
     },
-  },
-  mounted: function () {
-    var link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    }
-    link.href = `./assets/${this.botType}/favicon.ico`;
   },
 };
 </script>
