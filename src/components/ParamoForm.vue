@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <div class="text-center" style="margin: 25px 0">
-      <a href="//www.twitter.com/TwitchWarBot"
-        ><img class="img-fluid" src="../assets/TwitchWarBot.png" alt="paramo"
+      <a href="//www.twitter.com/paramobot"
+        ><img class="img-fluid" src="../assets/paramo/logo.png" alt="paramo"
       /></a>
     </div>
     <div class="row text-center justify-content-center">
       <div class="col-12 col-lg-8">
         <form
           form
-          action="https://liveformhq.com/form/4b506ee4-b17d-42fe-b4ad-d9b3f9376d4d"
+          action="https://liveformhq.com/form/8e998583-1539-4ead-8b4a-0c8ae72a1e4c"
           method="POST"
           accept-charset="utf-8"
         >
@@ -21,32 +21,30 @@
           <div class="form-group">
             <div class="card">
               <div class="card-body text-center">
-                <h3 class="card-title">Streamers que quieres ver en la batalla</h3>
+                <h3 class="card-title">Tu nombre de Twitter</h3>
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Recuerda que tienen que ser de España
+                  No es obligatorio, pero entrarás a participar en el sorteo
                 </h6>
                 <input
                   type="text"
-                  required="true"
                   name="username"
-                  placeholder="Escribe sus nombres aquí..."
+                  placeholder="Inserte username..."
                   class="form-control"
                   id="username"
                 />
                 <h6 class="card-subtitle mb-2 mt-2">
-                  ¡Ya hay muchos apuntados! (<a
+                  ¡Otros ya han participado! (<a
                     style="font-weight: normal"
-					target="_blank"
                     href="/json/participants.json"
                     >lista completa</a
                   >)
                 </h6>
                 <template v-for="participant in shuffledParticipants">
                   <div v-bind:key="participant" class="d-inline">
-                    <a :href="'//www.twitter.com/' + participant" target="_blank"
+                    <a :href="'//www.twitter.com/' + participant"
                       ><img
                         class="img-fluid img-narrow"
-                        :src="require(`../assets/avatars/${participant}.png`)"
+                        :src="require(`../assets/paramo/avatars/${participant}.png`)"
                         alt="paramo"
                     /></a>
                   </div>
@@ -104,7 +102,6 @@
                     <h6>
                       Es sólo una de las armas (<a
                         style="font-weight: normal"
-						target="_blank"
                         href="/json/weapons.json"
                         >lista completa</a
                       >)
@@ -198,7 +195,6 @@
                     <h6>
                       Es sólo uno de los peligros (<a
                         style="font-weight: normal"
-						target="_blank"
                         href="/json/injures.json"
                         >lista completa</a
                       >)
@@ -290,9 +286,8 @@
                   <div class="carousel-space d-block d-md-none"></div>
                   <div class="carousel-caption">
                     <h6>
-                      Es sólo uno de los potenciadores (<a
+                      Es sólo uno de los powerups (<a
                         style="font-weight: normal"
-						target="_blank"
                         href="/json/powerups.json"
                         >lista completa</a
                       >)
@@ -341,7 +336,7 @@
               <div class="card-body text-center">
                 <h3 class="card-title">¿Algo más?</h3>
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Algo más que se te ocurra, cualquier cosa
+                  Algo más que se te ocurra, yokse
                 </h6>
                 <input
                   type="text"
@@ -356,7 +351,7 @@
           <div class="form-group">
             <div class="card">
               <div class="card-body text-center">
-                <a style="color: #914ffb; font-weight: 800"
+                <a style="color: #dd3eda; font-weight: 800"
                   >Acuérdate de pulsar aquí! -------------------->
                 </a>
                 <button
@@ -376,14 +371,14 @@
 </template>
 
 <script>
-import weapons from "../assets/weapons.json";
-import injures from "../assets/injures.json";
-import powerups from "../assets/powerups.json";
-import participants from "../assets/participants.json";
+import weapons from "../assets/paramo/weapons.json";
+import injures from "../assets/paramo/injures.json";
+import powerups from "../assets/paramo/powerups.json";
+import participants from "../assets/paramo/participants.json";
 import $ from "jquery";
 
 export default {
-  name: "suggestions-form",
+  name: "paramo-form",
   data() {
     return {
       weapons: weapons,
@@ -422,14 +417,14 @@ export default {
       return this.shuffle(this.powerups);
     },
     shuffledParticipants: function () {
-      return this.shuffle(this.participants).splice(0,18);
+      return this.shuffle(this.participants);
     },
   },
   watch: {
     $route: {
       immediate: true,
       handler() {
-        document.title = "Twitch War Bot";
+        document.title = "Páramo Bot";
       },
     },
   },
@@ -478,7 +473,7 @@ export default {
   margin-bottom: 30px;
 }
 .carousel.slide {
-  background-color: #914ffb;
+  background-color: #dd3eda;
   text-align: center;
   color: white;
 }
