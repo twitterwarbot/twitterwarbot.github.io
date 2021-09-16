@@ -2,7 +2,10 @@
   <div class="container">
     <div class="text-center" style="margin: 25px 0">
       <a href="//www.twitter.com/paramobot"
-        ><img class="img-fluid" src="../assets/paramo/logo.png" alt="paramo"
+        ><img
+          class="img-fluid img-narrow"
+          src="../assets/paramo/logo.png"
+          alt="paramo"
       /></a>
     </div>
     <div class="row text-center justify-content-center">
@@ -389,8 +392,8 @@ export default {
       participants: participants,
     };
   },
-  mounted: function() {
-    this.$nextTick(function() {
+  mounted: function () {
+    this.$nextTick(function () {
       $("#carousel0").carousel({
         interval: 2000,
       });
@@ -406,16 +409,16 @@ export default {
     });
   },
   computed: {
-    shuffledWeapons: function() {
+    shuffledWeapons: function () {
       return this.shuffle(this.weapons);
     },
-    shuffledInjures: function() {
+    shuffledInjures: function () {
       return this.shuffle(this.injures);
     },
-    shuffledPowerups: function() {
+    shuffledPowerups: function () {
       return this.shuffle(this.powerups);
     },
-    shuffledParticipants: function() {
+    shuffledParticipants: function () {
       return this.shuffle(this.participants);
     },
   },

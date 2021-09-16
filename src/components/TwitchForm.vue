@@ -2,7 +2,10 @@
   <div class="container">
     <div class="text-center" style="margin: 25px 0">
       <a href="//www.twitter.com/TwitchWarBot"
-        ><img class="img-fluid" src="../assets/twitch/logo.png" alt="twitch"
+        ><img
+          class="img-fluid img-narrow"
+          src="../assets/twitch/logo.png"
+          alt="twitch"
       /></a>
     </div>
     <div class="row text-center justify-content-center">
@@ -22,14 +25,13 @@
             <div class="card">
               <div class="card-body text-center">
                 <h3 class="card-title">
-                  Streamers que quieres ver en la batalla
+                  Streamers españoles que quieres ver en la batalla
                 </h3>
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Recuerda que tienen que ser de España
+                  Si sabes de qué provincia son, puedes escribirlo
                 </h6>
                 <input
                   type="text"
-                  required="true"
                   name="username"
                   placeholder="Escribe sus nombres aquí..."
                   class="form-control"
@@ -346,7 +348,7 @@
               <div class="card-body text-center">
                 <h3 class="card-title">¿Algo más?</h3>
                 <h6 class="card-subtitle mb-2 text-muted">
-                  Algo más que se te ocurra, cualquier cosa
+                  Cualquier sugerencia que se te ocurra
                 </h6>
                 <input
                   type="text"
@@ -397,8 +399,8 @@ export default {
       participants: participants,
     };
   },
-  mounted: function() {
-    this.$nextTick(function() {
+  mounted: function () {
+    this.$nextTick(function () {
       $("#carousel0").carousel({
         interval: 2000,
       });
@@ -414,16 +416,16 @@ export default {
     });
   },
   computed: {
-    shuffledWeapons: function() {
+    shuffledWeapons: function () {
       return this.shuffle(this.weapons);
     },
-    shuffledInjures: function() {
+    shuffledInjures: function () {
       return this.shuffle(this.injures);
     },
-    shuffledPowerups: function() {
+    shuffledPowerups: function () {
       return this.shuffle(this.powerups);
     },
-    shuffledParticipants: function() {
+    shuffledParticipants: function () {
       return this.shuffle(this.participants).splice(0, 18);
     },
   },
@@ -463,6 +465,7 @@ export default {
   position: absolute;
   bottom: 0;
   padding-bottom: 0;
+  color: #000;
 }
 .carousel-item {
   height: 170px;
