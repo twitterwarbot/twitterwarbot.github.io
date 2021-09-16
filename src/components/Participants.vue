@@ -57,6 +57,15 @@ export default {
       }
     },
   },
+  mounted: function () {
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    link.href = `./assets/${this.botType}/favicon.ico`;
+  },
 };
 </script>
 <style scoped>
