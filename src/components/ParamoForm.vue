@@ -35,7 +35,7 @@
                 <h6 class="card-subtitle mb-2 mt-2">
                   ¡Otros ya han participado! (<a
                     style="font-weight: normal"
-                    href="/json/participants.json"
+                    href="/participants?bot=paramo"
                     >lista completa</a
                   >)
                 </h6>
@@ -44,7 +44,9 @@
                     <a :href="'//www.twitter.com/' + participant"
                       ><img
                         class="img-fluid img-narrow"
-                        :src="require(`../assets/paramo/avatars/${participant}.png`)"
+                        :src="
+                          require(`../assets/paramo/avatars/${participant}.png`)
+                        "
                         alt="paramo"
                     /></a>
                   </div>

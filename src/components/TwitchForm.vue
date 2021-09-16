@@ -21,7 +21,9 @@
           <div class="form-group">
             <div class="card">
               <div class="card-body text-center">
-                <h3 class="card-title">Streamers que quieres ver en la batalla</h3>
+                <h3 class="card-title">
+                  Streamers que quieres ver en la batalla
+                </h3>
                 <h6 class="card-subtitle mb-2 text-muted">
                   Recuerda que tienen que ser de España
                 </h6>
@@ -33,20 +35,23 @@
                   class="form-control"
                   id="username"
                 />
-                <h6 class="card-subtitle mb-2 mt-2">
+                <h6 class="card-subtitle mb-2 mt-2 p-2 bg-warning">
                   ¡Ya hay muchos apuntados! (<a
-                    style="font-weight: normal"
-					target="_blank"
-                    href="/json/participants.json"
+                    target="_blank"
+                    href="/participants?bot=twitch"
                     >lista completa</a
                   >)
                 </h6>
                 <template v-for="participant in shuffledParticipants">
                   <div v-bind:key="participant" class="d-inline">
-                    <a :href="'//www.twitter.com/' + participant" target="_blank"
+                    <a
+                      :href="'//www.twitter.com/' + participant"
+                      target="_blank"
                       ><img
                         class="img-fluid img-narrow"
-                        :src="require(`../assets/twitch/avatars/${participant}.png`)"
+                        :src="
+                          require(`../assets/twitch/avatars/${participant}.png`)
+                        "
                         alt="paramo"
                     /></a>
                   </div>
@@ -100,11 +105,11 @@
                     </template>
                   </div>
                   <div class="carousel-space d-block d-md-none"></div>
-                  <div class="carousel-caption">
+                  <div class="carousel-caption bg-warning mb-3">
                     <h6>
                       Es sólo una de las armas (<a
                         style="font-weight: normal"
-						target="_blank"
+                        target="_blank"
                         href="/json/weapons.json"
                         >lista completa</a
                       >)
@@ -141,7 +146,7 @@
                 <input
                   type="text"
                   name="armas"
-                  placeholder="Inserte aquí las armas..."
+                  placeholder="Escribe aquí las armas..."
                   class="form-control"
                   id="armas"
                 />
@@ -194,11 +199,11 @@
                     </template>
                   </div>
                   <div class="carousel-space d-block d-md-none"></div>
-                  <div class="carousel-caption">
+                  <div class="carousel-caption bg-warning mb-3">
                     <h6>
                       Es sólo uno de los peligros (<a
                         style="font-weight: normal"
-						target="_blank"
+                        target="_blank"
                         href="/json/injures.json"
                         >lista completa</a
                       >)
@@ -235,7 +240,7 @@
                 <input
                   type="text"
                   name="injury"
-                  placeholder="Inserte aquí los peligros..."
+                  placeholder="Escribe aquí los peligros..."
                   class="form-control"
                   id="injury"
                 />
@@ -288,11 +293,11 @@
                     </template>
                   </div>
                   <div class="carousel-space d-block d-md-none"></div>
-                  <div class="carousel-caption">
+                  <div class="carousel-caption bg-warning mb-3">
                     <h6>
                       Es sólo uno de los potenciadores (<a
                         style="font-weight: normal"
-						target="_blank"
+                        target="_blank"
                         href="/json/powerups.json"
                         >lista completa</a
                       >)
@@ -329,7 +334,7 @@
                 <input
                   type="text"
                   name="powerup"
-                  placeholder="Inserte aquí los potenciadores..."
+                  placeholder="Escribe aquí los potenciadores..."
                   class="form-control"
                   id="powerup"
                 />
@@ -346,7 +351,7 @@
                 <input
                   type="text"
                   name="suggestion"
-                  placeholder="Inserte aquí las sugerencias..."
+                  placeholder="Escribe aquí las sugerencias..."
                   class="form-control"
                   id="suggestion"
                 />
@@ -422,7 +427,7 @@ export default {
       return this.shuffle(this.powerups);
     },
     shuffledParticipants: function () {
-      return this.shuffle(this.participants).splice(0,18);
+      return this.shuffle(this.participants).splice(0, 18);
     },
   },
   watch: {
@@ -484,9 +489,6 @@ export default {
 }
 .carousel.slide--dull {
   background-color: #ffffff;
-}
-a {
-  color: #b4bdff;
 }
 .img-narrow {
   width: 100px;
