@@ -54,7 +54,7 @@
                         :src="
                           require(`../assets/twitch/avatars/${participant}.png`)
                         "
-                        alt="paramo"
+                        :alt="participant"
                     /></a>
                   </div>
                 </template>
@@ -399,8 +399,8 @@ export default {
       participants: participants,
     };
   },
-  mounted: function () {
-    this.$nextTick(function () {
+  mounted: function() {
+    this.$nextTick(function() {
       $("#carousel0").carousel({
         interval: 2000,
       });
@@ -416,16 +416,16 @@ export default {
     });
   },
   computed: {
-    shuffledWeapons: function () {
+    shuffledWeapons: function() {
       return this.shuffle(this.weapons);
     },
-    shuffledInjures: function () {
+    shuffledInjures: function() {
       return this.shuffle(this.injures);
     },
-    shuffledPowerups: function () {
+    shuffledPowerups: function() {
       return this.shuffle(this.powerups);
     },
-    shuffledParticipants: function () {
+    shuffledParticipants: function() {
       return this.shuffle(this.participants).splice(0, 18);
     },
   },

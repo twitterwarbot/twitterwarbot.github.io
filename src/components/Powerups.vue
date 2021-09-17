@@ -19,8 +19,8 @@
           <div class="d-flex flex-column align-items-center">
             <img
               class="img-fluid img-small"
-              :src="require(`../assets/twitch/powerup.png`)"
-              alt="paramo"
+              :src="require(`../assets/${botType}/powerup.png`)"
+              alt="powerup"
             />
             <div>{{ weapon }}</div>
           </div>
@@ -42,6 +42,15 @@ export default {
         window.location = "/";
         return null;
       }
+    },
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        if (this.botType == "paramo") document.title = "Páramo Bot";
+        else if (this.botType == "twitch") document.title = "Twitch War Bot";
+      },
     },
   },
 };

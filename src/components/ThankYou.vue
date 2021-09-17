@@ -16,8 +16,16 @@
 <script>
 export default {
   name: "thank-you",
-  beforeCreate: function () {
+  beforeCreate: function() {
     document.body.className = "bg-dark";
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        document.title = "War Bot";
+      },
+    },
   },
 };
 </script>

@@ -5,7 +5,7 @@
         <img
           class="img-fluid"
           :src="require(`../assets/${botType}/map_preview.png`)"
-          alt="paramo"
+          alt="map_preview"
         />
       </div>
     </div>
@@ -31,7 +31,7 @@
                 :src="
                   require(`../assets/${botType}/avatars/${participant}.png`)
                 "
-                alt="paramo"
+                :alt="participant"
               />
               <div>{{ participant }}</div>
             </div></a
@@ -54,6 +54,15 @@ export default {
         window.location = "/";
         return null;
       }
+    },
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        if (this.botType == "paramo") document.title = "Páramo Bot";
+        else if (this.botType == "twitch") document.title = "Twitch War Bot";
+      },
     },
   },
 };
