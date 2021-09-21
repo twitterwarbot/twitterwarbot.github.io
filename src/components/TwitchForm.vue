@@ -18,7 +18,7 @@
         >
           <input
             type="hidden"
-            value="https://liveformhq.com/thank_you"
+            value="https://twitterwarbot.github.io/"
             name="_redirect"
           />
           <div class="form-group">
