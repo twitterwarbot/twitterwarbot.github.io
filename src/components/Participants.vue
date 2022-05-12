@@ -9,7 +9,7 @@
         />
       </div>
     </div>
-    <div class="card mb-3 p-2 bg-warning">
+    <!-- <div class="card mb-3 p-2 bg-warning">
       <div class="d-flex justify-content-center">
         <b
           >¿Echas en falta a algún/a streamer?
@@ -18,7 +18,7 @@
           ></b
         >
       </div>
-    </div>
+    </div> -->
     <div class="d-flex flex-wrap justify-content-center mb-5">
       <template
         v-for="participant in require(`../assets/${botType}/participants.json`)"
