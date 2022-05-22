@@ -4,7 +4,7 @@
       <div class="d-flex justify-content-center">
         <b
           >¿Se te ha ocurrido alguna idea?
-          <a :href="`/${botType}`" target="_blank"
+          <a :href="`/${botType}`"
             >¡Aquí puedes sugerirla!</a
           ></b
         >
