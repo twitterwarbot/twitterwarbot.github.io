@@ -5,11 +5,11 @@
         <b>¿Se te ha ocurrido alguna idea? <a :href="`/${botType}`">¡Aquí puedes sugerirla!</a></b>
       </div>
     </div>
-    <!-- <div class="text-center mt-5 mb-3">
+    <div class="text-center mt-5 mb-3">
       <div class="card">
         <img class="img-fluid" :src="require(`../assets/${botType}/map_preview.png`)" alt="map_preview" />
       </div>
-    </div> -->
+    </div>
     <!-- <div class="card mb-3 p-2 bg-warning">
       <div class="d-flex justify-content-center">
         <b
