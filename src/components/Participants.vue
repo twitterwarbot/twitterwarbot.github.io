@@ -27,11 +27,11 @@
         </div>
       </template>
     </div>
-    <div class="text-center mt-5 mb-3">
+    <!-- <div class="text-center mt-5 mb-3">
       <div class="card">
         <img class="img-fluid" :src="require(`../assets/${botType}/map_preview.png`)" alt="map_preview" />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -15,7 +15,7 @@
                   No es obligatorio, pero entrarás a participar en el sorteo
                 </h6>
                 <input type="text" name="username" placeholder="Tu @ de twitter..." class="form-control" id="username" />
-                <h6 class="card-subtitle mb-2 mt-2">¡Otros ya han participado! (<a style="font-weight: normal" href="/participants?bot=paramo">lista completa</a>)</h6>
+                <!-- <h6 class="card-subtitle mb-2 mt-2">¡Otros ya han participado! (<a style="font-weight: normal" href="/participants?bot=paramo">lista completa</a>)</h6> -->
                 <template v-for="participant in shuffledParticipants">
                   <div v-bind:key="participant" class="d-inline">
                     <a :href="'//www.twitter.com/' + participant"><img class="img-fluid img-narrow" :src="require(`../assets/paramo/avatars/${participant}.png`)" :alt="participant"/></a>
