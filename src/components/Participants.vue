@@ -20,7 +20,7 @@
         <div v-bind:key="participant" class="card d-inline text-center m-1">
           <a :href="'//www.twitter.com/' + participant" target="_blank">
             <div class="d-flex flex-column align-items-center">
-              <img class="img-fluid img-narrow" :src="require(`../assets/${botType}/avatars/${participant}.png`)" :alt="participant" />
+              <img class="img-fluid img-narrow" :src="require(`../assets/${botType}/avatars/${participant}.jpg`)" :alt="participant" />
               <div>{{ participant }}</div>
             </div></a
           >

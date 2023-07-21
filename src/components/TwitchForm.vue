@@ -52,7 +52,7 @@
                       ><img
                         class="img-fluid img-narrow"
                         :src="
-                          require(`../assets/twitch/avatars/${participant}.png`)
+                          require(`../assets/twitch/avatars/${participant}.jpg`)
                         "
                         :alt="participant"
                     /></a>
